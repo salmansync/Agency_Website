@@ -169,12 +169,13 @@ body.hovered #cursor-blur {
 .overlay-content h4 { color: #fff; font-size: 1.5rem; margin-bottom: 5px; }
 .overlay-content span { color: var(--primary); }
 
-/* ================= TEAM (5 COLUMNS) ================= */
+/* ================= TEAM (PROFESSIONAL CARDS) ================= */
+/* Smart Grid for 5 items */
 .team-grid {
     display: grid;
     /* Flexible grid that ensures all 5 fit in one row on desktop */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
     justify-content: center;
 }
 @media (min-width: 1200px) {
@@ -185,7 +186,7 @@ body.hovered #cursor-blur {
     background: rgba(30, 41, 59, 0.7); /* Glass-like dark */
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.1);
-    padding: 30px 15px; /* Compact padding */
+    padding: 40px 20px;
     border-radius: 20px;
     transition: 0.4s;
     text-align: center;
@@ -207,8 +208,8 @@ body.hovered #cursor-blur {
 .link-overlay { position: absolute; inset: 0; background: rgba(79, 70, 229, 0.85); display: flex; align-items: center; justify-content: center; gap: 5px; color: #fff; font-weight: 600; opacity: 0; transition: 0.3s; font-size: 0.85rem; text-decoration: none; }
 .team-img-box:hover .link-overlay { opacity: 1; }
 
-.team-info h3 { font-size: 1.1rem; margin-bottom: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-.team-info .role { color: var(--primary); font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 2px; }
+.team-info h3 { font-size: 1.2rem; margin-bottom: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.team-info .role { color: var(--primary); font-size: 0.9rem; font-weight: 600; display: block; margin-bottom: 2px; }
 .sub-role { color: var(--text-muted); font-size: 0.8rem; display: block; margin-bottom: 15px; font-style: italic; min-height: 1.2em; }
 
 /* Team Social Bar */
