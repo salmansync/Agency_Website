@@ -3,7 +3,7 @@
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-![Agency Website Banner](images/Preview.png)
+![Agency Website Banner](Agency Website/images/Preview.png)
 A highly interactive, responsive, and visually engaging personal portfolio website built with **HTML, CSS, JavaScript, and Three.js**. 
 
 This project showcases advanced front-end techniques including 3D backgrounds, complex CSS animations, glassmorphism, and dynamic theme switching.
