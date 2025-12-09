@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen | Digital Agency BD</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%234f46e5' rx='20'/><path d='M30 75V25h12l28 36V25h10v50H68L40 39v36z' fill='white' font-weight='bold'/></svg>" type="image/svg+xml">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="4"></circle>
+            </svg>
+            <span class="loader-text">Loading NextGen...</span>
+        </div>
+    </div>
+
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <canvas id="webgl"></canvas>
+
+    <header id="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand hover-trigger">NextGen<span class="dot">.</span></a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link hover-trigger active" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#services" class="nav-link hover-trigger" data-i18n="nav_services">Services</a></li>
+                    <li><a href="#work" class="nav-link hover-trigger" data-i18n="nav_work">Work</a></li>
+                    <li><a href="#team" class="nav-link hover-trigger" data-i18n="nav_team">Team</a></li>
+                    <li><a href="#pricing" class="nav-link hover-trigger" data-i18n="nav_pricing">Pricing</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="lang-toggle" class="hover-trigger">ENG</button>
+
+                <div class="theme-toggle hover-trigger">
+                    <input type="checkbox" id="theme-switch" class="theme-checkbox">
+                    <label for="theme-switch" class="theme-label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+
+                <a href="#contact" class="btn btn-primary hover-trigger mobile-hide" data-i18n="btn_contact">Contact Us</a>
+
+                <div class="hamburger hover-trigger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <div class="badge fade-up" data-i18n="hero_badge">#1 Digital Agency in BD</div>
+                <h1 class="hero-title fade-up delay-1">
+                    <span data-i18n="hero_prefix">We Build</span> <br>
+                    <span class="txt-rotate" data-period="2000" data-rotate='[ "Digital Empires", "Custom Software", "Modern Brands" ]'></span>
+                </h1>
+                <p class="hero-subtitle fade-up delay-2" data-i18n="hero_desc">
+                    Led by MD. SALMAN FARSI & Team. We transform ideas into high-performance digital reality.
+                </p>
+                <div class="hero-btns fade-up delay-3">
+                    <a href="#work" class="btn btn-primary hover-trigger" data-i18n="btn_work">View Projects</a>
+                    <a href="#contact" class="btn btn-outline hover-trigger" data-i18n="btn_quote">Get a Quote</a>
+                </div>
+
+                <div class="hero-stats fade-up delay-4">
+                    <div class="stat">
+                        <h3 class="counter" data-target="250">0</h3>
+                        <p data-i18n="stat_proj">Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p data-i18n="stat_sat">Satisfaction</p>
+                    </div>
+                    <div class="stat">
+                        <h3 class="counter" data-target="15">0</h3>
+                        <p data-i18n="stat_award">Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#services" class="scroll-down hover-trigger">
+            <span data-i18n="scroll">Scroll</span>
+            <div class="mouse-icon"><div class="wheel"></div></div>
+        </a>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-head text-center">
+                <span class="tag" data-i18n="tag_expert">Expertise</span>
+                <h2 class="title" data-i18n="title_service">Our Services</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card hover-trigger fade-scroll">
+                    <div class="icon-wrapper"><i class="fas fa-pencil-ruler"></i></div>
+                    <h3 data-i18n="serv_1_t">Graphic Design</h3>
+                    <p data-i18n="serv_1_d">Strategic branding, logo design, and visual identities crafted by our design team.</p>
+                </div>
+                <div class="service-card hover-trigger fade-scroll delay-1">
+                    <div class="icon-wrapper"><i class="fas fa-laptop-code"></i></div>
+                    <h3 data-i18n="serv_2_t">Web Development</h3>
+                    <p data-i18n="serv_2_d">Blazing fast websites using React & Node.js. Optimized for SEO and performance.</p>
+                </div>
+                <div class="service-card hover-trigger fade-scroll delay-2">
+                    <div class="icon-wrapper"><i class="fas fa-bezier-curve"></i></div>
+                    <h3 data-i18n="serv_3_t">UI/UX Design</h3>
+                    <p data-i18n="serv_3_d">We create intuitive user journeys that convert visitors into loyal customers.</p>
+                </div>
+                <div class="service-card hover-trigger fade-scroll delay-3">
+                    <div class="icon-wrapper"><i class="fas fa-server"></i></div>
+                    <h3 data-i18n="serv_4_t">Software Dev</h3>
+                    <p data-i18n="serv_4_d">Scalable enterprise software architectures designed for complex business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="section bg-light">
+        <div class="container">
+            <div class="section-head text-center">
+                <span class="tag" data-i18n="tag_port">Portfolio</span>
+                <h2 class="title" data-i18n="title_work">Selected Works</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="filter-btns fade-scroll">
+                <button class="filter-btn active hover-trigger" data-filter="all">All</button>
+                <button class="filter-btn hover-trigger" data-filter="web">Web</button>
+                <button class="filter-btn hover-trigger" data-filter="app">App</button>
+                <button class="filter-btn hover-trigger" data-filter="design">Design</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item web fade-scroll">
+                    <div class="portfolio-thumb">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Work">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h4>FinTech Dash</h4>
+                                <span>Web Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item design fade-scroll delay-1">
+                    <div class="portfolio-thumb">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Work">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h4>Modern Brand</h4>
+                                <span>Graphic Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item app fade-scroll delay-2">
+                    <div class="portfolio-thumb">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Work">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h4>Health App</h4>
+                                <span>Mobile Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-head text-center">
+                <span class="tag" data-i18n="tag_team">The Squad</span>
+                <h2 class="title" data-i18n="title_team">Meet The Experts</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="team-grid">
+
+                <div class="team-card hover-trigger fade-scroll">
+                    <div class="team-img-box">
+                        <img src="images/salman.jpg" alt="Md. Salman Farsi">
+                        <a href="https://linkedin.com" target="_blank" class="link-overlay">
+                            <i class="fas fa-external-link-alt"></i> <span data-i18n="view_port">Portfolio</span>
+                        </a>
+                    </div>
+                    <div class="team-info">
+                        <h3 data-i18n="team_1_name">MD. SALMAN FARSI</h3>
+                        <span class="role" data-i18n="team_1_role">Project Lead & Frontend</span>
+                        <span class="sub-role" data-i18n="team_leader_label">(Team Leader)</span>
+                        <div class="team-socials">
+                            <a href="#" class="hover-trigger"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="hover-trigger"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card hover-trigger fade-scroll delay-1">
+                    <div class="team-img-box">
+                        <img src="images/sumaiya.jpg" alt="Sumaiya">
+                        <a href="#" target="_blank" class="link-overlay">
+                            <i class="fas fa-external-link-alt"></i> <span data-i18n="view_port">Portfolio</span>
+                        </a>
+                    </div>
+                    <div class="team-info">
+                        <h3 data-i18n="team_2_name">SUMAIYA</h3>
+                        <span class="role" data-i18n="team_2_role">Content Management</span>
+                        <span class="sub-role">&nbsp;</span>
+                        <div class="team-socials">
+                            <a href="#" class="hover-trigger"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="hover-trigger"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card hover-trigger fade-scroll delay-2">
+                    <div class="team-img-box">
+                        <img src="images/mahidul.jpg" alt="Md. Mahidul Islam">
+                        <a href="#" target="_blank" class="link-overlay">
+                            <i class="fas fa-external-link-alt"></i> <span data-i18n="view_port">Portfolio</span>
+                        </a>
+                    </div>
+                    <div class="team-info">
+                        <h3 data-i18n="team_3_name">MD. MAHIDUL ISLAM</h3>
+                        <span class="role" data-i18n="team_3_role">Responsive Layout Dev</span>
+                        <span class="sub-role">&nbsp;</span>
+                        <div class="team-socials">
+                            <a href="#" class="hover-trigger"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="hover-trigger"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card hover-trigger fade-scroll delay-3">
+                    <div class="team-img-box">
+                        <img src="images/hasan.jpg" alt="Hasan Reza">
+                        <a href="#" target="_blank" class="link-overlay">
+                            <i class="fas fa-external-link-alt"></i> <span data-i18n="view_port">Portfolio</span>
+                        </a>
+                    </div>
+                    <div class="team-info">
+                        <h3 data-i18n="team_4_name">HASAN REZA</h3>
+                        <span class="role" data-i18n="team_4_role">Testing & Deployment</span>
+                        <span class="sub-role">&nbsp;</span>
+                        <div class="team-socials">
+                            <a href="#" class="hover-trigger"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="hover-trigger"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card hover-trigger fade-scroll delay-4">
+                    <div class="team-img-box">
+                        <img src="images/sifat.jpg" alt="Md. Sifat Molla">
+                        <a href="#" target="_blank" class="link-overlay">
+                            <i class="fas fa-external-link-alt"></i> <span data-i18n="view_port">Portfolio</span>
+                        </a>
+                    </div>
+                    <div class="team-info">
+                        <h3 data-i18n="team_5_name">MD. SIFAT MOLLA</h3>
+                        <span class="role" data-i18n="team_5_role">Graphic Designer</span>
+                        <span class="sub-role">&nbsp;</span>
+                        <div class="team-socials">
+                            <a href="#" class="hover-trigger"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="hover-trigger"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section bg-light">
+        <div class="container">
+            <div class="section-head text-center">
+                <span class="tag" data-i18n="tag_price">Pricing</span>
+                <h2 class="title" data-i18n="title_price">Flexible Plans</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card hover-trigger fade-scroll">
+                    <div class="p-header">
+                        <h3 data-i18n="plan_1">Starter</h3>
+                        <div class="price">৳20,000</div>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_web">Basic Website</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_mob">Mobile Responsive</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_seo">Basic SEO</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline full-width" data-i18n="btn_choose">Choose Plan</a>
+                </div>
+                <div class="pricing-card popular hover-trigger fade-scroll delay-1">
+                    <div class="badge-pop" data-i18n="badge_pop">Popular</div>
+                    <div class="p-header">
+                        <h3 data-i18n="plan_2">Business</h3>
+                        <div class="price">৳50,000</div>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_dyn">Dynamic Website</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_cms">CMS Integration</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_logo">Logo Design</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary full-width" data-i18n="btn_choose">Choose Plan</a>
+                </div>
+                <div class="pricing-card hover-trigger fade-scroll delay-2">
+                    <div class="p-header">
+                        <h3 data-i18n="plan_3">Enterprise</h3>
+                        <div class="price" data-i18n="price_cust">Custom</div>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_soft">Custom Software</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_cloud">Cloud Architecture</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="feat_supp">24/7 Support</span></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline full-width" data-i18n="btn_contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-container glass-panel">
+                <div class="contact-info">
+                    <div class="info-top">
+                        <h3 data-i18n="contact_t">Get In Touch</h3>
+                        <p data-i18n="contact_d">Ready to start? Fill out the form or contact us directly.</p>
+                        <div class="c-details">
+                            <div class="c-item hover-trigger">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-i18n="addr">Gulshan-1, Dhaka-1212</span>
+                            </div>
+                            <div class="c-item hover-trigger">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@nextgen.bd</span>
+                            </div>
+                            <div class="c-item hover-trigger">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+880 1712 345 678</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links-big">
+                        <a href="#" class="hover-trigger"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover-trigger"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover-trigger"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover-trigger"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder=" " class="hover-trigger">
+                        <label for="name" data-i18n="form_name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" " class="hover-trigger">
+                        <label for="email" data-i18n="form_email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required placeholder=" " class="hover-trigger"></textarea>
+                        <label for="message" data-i18n="form_msg">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width hover-trigger" data-i18n="form_send">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="#" class="brand">NextGen<span>.</span></a>
+                    <p data-i18n="footer_desc">We are a team of creators, engineers, and dreamers building the digital future. Trust us with your vision.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="ft_comp">Company</h4>
+                    <ul>
+                        <li><a href="#home" class="hover-trigger" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#team" class="hover-trigger" data-i18n="nav_team">Team</a></li>
+                        <li><a href="#contact" class="hover-trigger" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="ft_serv">Services</h4>
+                    <ul>
+                        <li><a href="#" class="hover-trigger">Web Development</a></li>
+                        <li><a href="#" class="hover-trigger">Mobile Apps</a></li>
+                        <li><a href="#" class="hover-trigger">Graphic Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col newsletter-col">
+                    <h4 data-i18n="ft_news">Newsletter</h4>
+                    <div class="input-wrap">
+                        <input type="email" placeholder="Email...">
+                        <button class="hover-trigger"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Developed by NextGen Team. <span data-i18n="ft_copy">All Rights Reserved.</span></p>
+                <div class="legal">
+                    <a href="#" class="hover-trigger" data-i18n="ft_priv">Privacy</a>
+                    <a href="#" class="hover-trigger" data-i18n="ft_term">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
