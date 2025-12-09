@@ -3,13 +3,13 @@
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-![Agency Website Banner](Agency_Website/images/Preview.png)
+![Agency Website Banner](images/Preview.png)
 A highly interactive, responsive, and visually engaging personal portfolio website built with **HTML, CSS, JavaScript, and Three.js**. 
 
 This project showcases advanced front-end techniques including 3D backgrounds, complex CSS animations, glassmorphism, and dynamic theme switching.
 
 ## 🔗 Live Demo
-### [👉 Click here to view the Live Site](salmansync.github.io/Agency_Website/)
+### [👉 Click here to view the Live Site](https://salmansync.github.io/Agency_Website/)
 ---
 A high-performance, fully responsive, and bilingual (English/Bangla) portfolio website designed for a modern digital agency in Bangladesh. This project features advanced animations, 3D backgrounds, and a premium "Glassmorphism" UI.
 
