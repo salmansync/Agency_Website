@@ -174,7 +174,7 @@ body.hovered #cursor-blur {
 .team-grid {
     display: grid;
     /* Flexible grid that ensures all 5 fit in one row on desktop */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     justify-content: center;
 }
